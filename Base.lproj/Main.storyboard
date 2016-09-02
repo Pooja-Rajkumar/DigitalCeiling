@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DigitalCeiling" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pageControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="4cl-RO-Qb2">
+                                <rect key="frame" x="280" y="563" width="39" height="37"/>
+                            </pageControl>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E7u-ua-JlZ">
+                                <rect key="frame" x="0.0" y="28" width="600" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7i6-U8-SvJ">
+                                <rect key="frame" x="8" y="28" width="54" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Intensity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxg-f5-4pj">
+                                <rect key="frame" x="8" y="252" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v3w-8I-06f">
+                                <rect key="frame" x="107" y="537" width="51" height="31"/>
+                                <connections>
+                                    <action selector="onOff:" destination="BYZ-38-t0r" eventType="valueChanged" id="bD4-jN-dyZ"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="On/Off" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hKo-cA-tuT">
+                                <rect key="frame" x="20" y="542" width="53" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LDs-VA-YEs">
+                                <rect key="frame" x="-1" y="260" width="600" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="LDs-VA-YEs" secondAttribute="height" multiplier="25:9" id="g9J-Bp-niU"/>
+                                    <constraint firstAttribute="width" constant="600" id="w4K-29-1O0"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LDs-VA-YEs" firstAttribute="top" secondItem="E7u-ua-JlZ" secondAttribute="bottom" constant="18" id="3Kh-vb-Ks7"/>
+                            <constraint firstItem="E7u-ua-JlZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="9Rb-XN-OQd"/>
+                            <constraint firstItem="LDs-VA-YEs" firstAttribute="top" secondItem="E7u-ua-JlZ" secondAttribute="bottom" constant="16" id="CGk-TN-944"/>
+                            <constraint firstItem="LDs-VA-YEs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-21" id="Eds-fW-Mnt"/>
+                            <constraint firstItem="E7u-ua-JlZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="V4G-i8-3aM"/>
+                            <constraint firstItem="E7u-ua-JlZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eY1-0u-mTH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E7u-ua-JlZ" secondAttribute="trailing" constant="-16" id="i8Z-No-RAo"/>
+                            <constraint firstItem="LDs-VA-YEs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mTH-DO-JFa"/>
+                            <constraint firstItem="4cl-RO-Qb2" firstAttribute="top" secondItem="LDs-VA-YEs" secondAttribute="bottom" constant="87" id="oh5-1d-n3h"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LDs-VA-YEs" secondAttribute="trailing" constant="-19" id="v2Y-St-t10"/>
+                            <constraint firstItem="LDs-VA-YEs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vYz-VK-Ndv"/>
+                            <constraint firstItem="E7u-ua-JlZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zdu-UQ-ftE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="intensity" destination="LDs-VA-YEs" id="Mmm-ga-Ju9"/>
+                        <outlet property="mySwitch" destination="v3w-8I-06f" id="U1D-34-cOH"/>
+                        <outlet property="picker" destination="E7u-ua-JlZ" id="R80-Jx-L4w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232" y="362"/>
+        </scene>
+    </scenes>
+</document>
