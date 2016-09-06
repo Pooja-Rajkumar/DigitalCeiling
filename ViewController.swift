@@ -7,15 +7,12 @@
 //
 
 import UIKit
-//import AVFoundation
-//import AVFoundation/AVCaptureSession.h
+
 class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet weak var picker: UIPickerView!
 
     @IBOutlet weak var intensity: UIPickerView!
-    
-    @IBOutlet weak var mySwitch: UISwitch!
     
     var intensityData: [String] = [String]()
 
@@ -25,10 +22,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     
     var brightness = 5
     
-    //var captureSession:AVCapturesession?
-    //var videoPreviewLayer:AVCaptureVideoPreviewLayer?
-    //var qrCodeFrameView:UIView?
-    
+    @IBOutlet weak var mySwitch: UISwitch!
 
     
     override func viewDidLoad() {
@@ -56,25 +50,35 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     func getRequests(requester: NSMutableURLRequest) -> NSURLSessionDataTask {
         let task = NSURLSession.sharedSession().dataTaskWithRequest(requester) {
             data, response, error in
+            
             // Check for error
-            if error != nil{
+            if error != nil
+            {
                 print("error=\(error)")
                 return
             }
+            
             // Print out response string
             let responseString = NSString(data: data!, encoding: NSUTF8StringEncoding)
             print("responseString = \(responseString)")
+            
+            
             // Convert server json response to NSDictionary
             do {
                 if let convertedJsonIntoDict = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as? NSDictionary {
+                    
                     // Print out dictionary
                     print(convertedJsonIntoDict)
+                    
                     // Get value by key
                     // let firstNameValue = convertedJsonIntoDict["userName"] as? String
                     //  print(firstNameValue!)
+                    
                 }
             } catch let error as NSError {
-                print(error.localizedDescription) }
+                print(error.localizedDescription)
+            }
+            
         }
        return task
         

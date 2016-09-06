@@ -14,6 +14,8 @@
 		6B3FE9371D4022A600D2FBBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B3FE9351D4022A600D2FBBC /* LaunchScreen.storyboard */; };
 		6B3FE9421D4022A600D2FBBC /* DigitalCeilingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3FE9411D4022A600D2FBBC /* DigitalCeilingTests.swift */; };
 		6B3FE94D1D4022A600D2FBBC /* DigitalCeilingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B3FE94C1D4022A600D2FBBC /* DigitalCeilingUITests.swift */; };
+		6B806B701D7F4320003A84DF /* qrCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B806B6F1D7F4320003A84DF /* qrCode.swift */; };
+		6B8530411D79F11B00BABB88 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B8530401D79F11B00BABB88 /* test.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		6B3FE9481D4022A600D2FBBC /* DigitalCeilingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigitalCeilingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B3FE94C1D4022A600D2FBBC /* DigitalCeilingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalCeilingUITests.swift; sourceTree = "<group>"; };
 		6B3FE94E1D4022A600D2FBBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B806B6F1D7F4320003A84DF /* qrCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = qrCode.swift; sourceTree = "<group>"; };
+		6B8530401D79F11B00BABB88 /* test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = test.storyboard; path = ../test.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		6B3FE9201D4022A600D2FBBC = {
 			isa = PBXGroup;
 			children = (
+				6B8530401D79F11B00BABB88 /* test.storyboard */,
 				6B3FE92B1D4022A600D2FBBC /* DigitalCeiling */,
 				6B3FE9401D4022A600D2FBBC /* DigitalCeilingTests */,
 				6B3FE94B1D4022A600D2FBBC /* DigitalCeilingUITests */,
@@ -103,6 +108,7 @@
 				6B3FE9331D4022A600D2FBBC /* Assets.xcassets */,
 				6B3FE9351D4022A600D2FBBC /* LaunchScreen.storyboard */,
 				6B3FE9381D4022A600D2FBBC /* Info.plist */,
+				6B806B6F1D7F4320003A84DF /* qrCode.swift */,
 			);
 			path = DigitalCeiling;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 				TargetAttributes = {
 					6B3FE9281D4022A600D2FBBC = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 25B56GT3NY;
 					};
 					6B3FE93C1D4022A600D2FBBC = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -231,6 +238,7 @@
 			files = (
 				6B3FE9371D4022A600D2FBBC /* LaunchScreen.storyboard in Resources */,
 				6B3FE9341D4022A600D2FBBC /* Assets.xcassets in Resources */,
+				6B8530411D79F11B00BABB88 /* test.storyboard in Resources */,
 				6B3FE9321D4022A600D2FBBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B3FE92F1D4022A600D2FBBC /* ViewController.swift in Sources */,
+				6B806B701D7F4320003A84DF /* qrCode.swift in Sources */,
 				6B3FE92D1D4022A600D2FBBC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -401,10 +410,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DigitalCeiling/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cisco.DigitalCeiling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +424,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DigitalCeiling/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Cisco.DigitalCeiling;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +499,7 @@
 				6B3FE9531D4022A600D2FBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B3FE9541D4022A600D2FBBC /* Build configuration list for PBXNativeTarget "DigitalCeilingTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +508,7 @@
 				6B3FE9561D4022A600D2FBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B3FE9571D4022A600D2FBBC /* Build configuration list for PBXNativeTarget "DigitalCeilingUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +517,7 @@
 				6B3FE9591D4022A600D2FBBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

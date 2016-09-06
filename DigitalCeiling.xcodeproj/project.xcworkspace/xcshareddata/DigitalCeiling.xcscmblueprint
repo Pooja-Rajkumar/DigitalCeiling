@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F07465BCB07EDA780B18BD9EBBECBEF40BB0B712",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F07465BCB07EDA780B18BD9EBBECBEF40BB0B712" : 0,
+    "4961AD217D96B0BDFF1C084FF7814D5D8CF7D41E" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BB8B8F65-EC97-4C2F-9500-5A8748E55736",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F07465BCB07EDA780B18BD9EBBECBEF40BB0B712" : "DigitalCeiling\/",
+    "4961AD217D96B0BDFF1C084FF7814D5D8CF7D41E" : "DigitalCeiling\/DigitalCeiling\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "DigitalCeiling",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "DigitalCeiling.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Pooja-Rajkumar\/DigitalCeiling.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4961AD217D96B0BDFF1C084FF7814D5D8CF7D41E"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Pooja-Rajkumar\/DigitalCeiling.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F07465BCB07EDA780B18BD9EBBECBEF40BB0B712"
+    }
+  ]
+}
