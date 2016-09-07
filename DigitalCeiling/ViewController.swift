@@ -13,6 +13,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
 
     @IBOutlet weak var picker: UIPickerView!
 
+    //@IBOutlet weak var intensity: UIPickerView!
+    
     @IBOutlet weak var intensity: UIPickerView!
     
     @IBOutlet weak var mySwitch: UISwitch!
@@ -20,6 +22,14 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     var intensityData: [String] = [String]()
 
     var pickerData: [String] = [String]()
+    
+    @IBOutlet weak var clicker: UIButton!
+    @IBOutlet weak var imageClicker: UIImageView!
+    
+    @IBOutlet weak var sliderIntensity: UISlider!
+   
+    @IBOutlet weak var intensityLabel: UILabel!
+    //@IBOutlet weak var intensityLabel: UILabel!
     
     var URL = "https://myworkplacews.cloudapps.cisco.com/lighting/setLightDetail?status=ON&brightness=5&mode=COOLWHITE&bldgid=SJC12&flrid=3&spid=C17A&app=cisco_maps&userid=sdasary"
     
@@ -29,7 +39,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
     //var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     //var qrCodeFrameView:UIView?
     
-
+    var buttonTapCounts = 0;
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +49,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         self.picker.dataSource = self
         self.picker.tag = 1
         
+        clicker.layer.zPosition = 1
+        imageClicker.layer.zPosition = 0
         
         self.intensity.delegate = self
         self.intensity.dataSource = self
@@ -48,6 +61,8 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         intensityData = ["1","2","3","4","5","6","7","8","9","10"]
         
         mySwitch.on = false
+        
+        
         
     
     }
@@ -124,7 +139,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 request.HTTPMethod = "GET"
                 let task = getRequests(request)
                 task.resume()
-                //NSLog(URL)
+                NSLog(URL)
             }
             if row == 1 { // if cool white option is selected
                 URL = "https://myworkplacews.cloudapps.cisco.com/lighting/setLightDetail?status=ON&brightness=" + String(brightness) + "&mode=COOLWHITE&bldgid=SJC12&flrid=3&spid=C17A&app=cisco_maps&userid=sdasary"
@@ -135,7 +150,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 let task = getRequests(request)
                 task.resume()
                 //UIApplication.sharedApplication().openURL(newURL)
-                //NSLog(URL)
+                NSLog(URL)
             }
             if row == 2 { // if daylight setting is selected
                 URL = "https://myworkplacews.cloudapps.cisco.com/lighting/setLightDetail?status=ON&brightness=" + String(brightness) + "&mode=DAYLIGHT&bldgid=SJC12&flrid=3&spid=C17A&app=cisco_maps&userid=sdasary"
@@ -146,7 +161,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 task.resume()
                 
                 //UIApplication.sharedApplication().openURL(newURL)
-             //   NSLog(URL)
+                NSLog(URL)
             }
             if row == 3 { // if video setting is selected
                 URL = "https://myworkplacews.cloudapps.cisco.com/lighting/setLightDetail?status=ON&brightness=" + String(brightness)+"&mode=TELEPRESENCE&bldgid=SJC12&flrid=3&spid=C17A&app=cisco_maps&userid=sdasary"
@@ -156,7 +171,7 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
                 let task = getRequests(request)
                 task.resume()
                 //UIApplication.sharedApplication().openURL(newURL)
-               // NSLog(URL)
+                NSLog(URL)
             }
             
         }
@@ -173,6 +188,28 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
             //UIApplication.sharedApplication().openURL(newURL)
            
         }
+    }
+    
+    
+    @IBOutlet weak var onButton: UIButton!
+    
+    @IBAction func OnButton(sender: AnyObject) {
+        buttonTapCounts += 1
+        if(buttonTapCounts % 2 == 0 ){
+            let newURL = NSURL(string: "https://myworkplacews.cloudapps.cisco.com/lighting/setLightDetail?status=OFF&bldgid=SJC12&flrid=3&spid=C17A&app=cisco_maps&userid=sdasary")!
+            let request = NSMutableURLRequest(URL:newURL)
+            request.HTTPMethod = "GET"
+            let task = getRequests(request)
+            task.resume()
+        } else {
+            let newURL = NSURL(string: "https://myworkplacews.cloudapps.cisco.com/lighting/setLightDetail?status=ON&bldgid=SJC12&flrid=3&spid=C17A&app=cisco_maps&userid=sdasary")!
+            let request = NSMutableURLRequest(URL:newURL)
+            request.HTTPMethod = "GET"
+            let task = getRequests(request)
+            task.resume()
+        }
+        
+    
     }
     
     
@@ -201,6 +238,25 @@ class ViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDele
         }
     }
     
+    
+    @IBAction func sliderChange(sender: AnyObject) {
+        let newBrightness = Int(sliderIntensity.value)
+        intensityLabel.text = "\(newBrightness)"
+        let replace = URL.stringByReplacingOccurrencesOfString("brightness="+String(brightness), withString: "brightness=" + String(newBrightness))
+        brightness = newBrightness
+        let newURL = NSURL(string: replace)!
+        let request = NSMutableURLRequest(URL:newURL)
+        request.HTTPMethod = "GET"
+        let task = getRequests(request)
+        task.resume()
+        NSLog(replace)
+    }
+    
+    @IBOutlet weak var pref: UIButton!
+    
+    @IBAction func getPref(sender: AnyObject) {
+        self.performSegueWithIdentifier("mover", sender: nil)
+    }
 
 }
 

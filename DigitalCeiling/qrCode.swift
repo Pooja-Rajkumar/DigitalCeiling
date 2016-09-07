@@ -78,9 +78,10 @@ class qrCode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
             vwQRCode?.frame = objBarCode.bounds;
             if objMetadataMachineReadableCodeObject.stringValue != nil {
           //      lblQRCodeResult.text = objMetadataMachineReadableCodeObject.stringValue
+                self.performSegueWithIdentifier("segue", sender: nil)
             }
             //**performSegueWithIdentifier(_ identifier: String?, sender sender:  AnyObject?)**
-            self.performSegueWithIdentifier("segue", sender: nil)
+            
         }
     }
     
