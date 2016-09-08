@@ -17,7 +17,6 @@
 		6B806B701D7F4320003A84DF /* qrCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B806B6F1D7F4320003A84DF /* qrCode.swift */; };
 		6B806BAF1D7F6FC9003A84DF /* off_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B806BAE1D7F6FC9003A84DF /* off_button.png */; };
 		6B806BB11D7FEC99003A84DF /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B806BB01D7FEC99003A84DF /* Preferences.swift */; };
-		6B806BB51D7FF51F003A84DF /* MyLaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B806BB41D7FF51F003A84DF /* MyLaunchImage.png */; };
 		6B806BB71D7FF61A003A84DF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B806BB61D7FF61A003A84DF /* Images.xcassets */; };
 		6B8530411D79F11B00BABB88 /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B8530401D79F11B00BABB88 /* test.storyboard */; };
 /* End PBXBuildFile section */
@@ -56,7 +55,6 @@
 		6B806B6F1D7F4320003A84DF /* qrCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = qrCode.swift; sourceTree = "<group>"; };
 		6B806BAE1D7F6FC9003A84DF /* off_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = off_button.png; path = ../../off_button.png; sourceTree = "<group>"; };
 		6B806BB01D7FEC99003A84DF /* Preferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Preferences.swift; path = ../Preferences.swift; sourceTree = "<group>"; };
-		6B806BB41D7FF51F003A84DF /* MyLaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MyLaunchImage.png; path = ../../MyLaunchImage.png; sourceTree = "<group>"; };
 		6B806BB61D7FF61A003A84DF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6B8530401D79F11B00BABB88 /* test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = test.storyboard; path = ../test.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,7 +117,6 @@
 				6B806BAE1D7F6FC9003A84DF /* off_button.png */,
 				6B806BB01D7FEC99003A84DF /* Preferences.swift */,
 				6B806B6F1D7F4320003A84DF /* qrCode.swift */,
-				6B806BB41D7FF51F003A84DF /* MyLaunchImage.png */,
 				6B806BB61D7FF61A003A84DF /* Images.xcassets */,
 			);
 			path = DigitalCeiling;
@@ -253,7 +250,6 @@
 				6B806BB71D7FF61A003A84DF /* Images.xcassets in Resources */,
 				6B3FE9341D4022A600D2FBBC /* Assets.xcassets in Resources */,
 				6B8530411D79F11B00BABB88 /* test.storyboard in Resources */,
-				6B806BB51D7FF51F003A84DF /* MyLaunchImage.png in Resources */,
 				6B3FE9321D4022A600D2FBBC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
